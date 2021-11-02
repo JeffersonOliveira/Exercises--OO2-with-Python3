@@ -44,5 +44,10 @@ print(f'{atlanta.nome} - {atlanta.temporadas} : {atlanta.likes}')
 filmes_e_series = [vingadores, atlanta]
 
 for programa in filmes_e_series:
-    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas
+    #detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas ## If ternário
+    if hasattr(programa,'duracao'):
+        detalhes = programa.duracao
+    else
+        detalhes = programa.temporadas
+
     print(f'{programa.nome} - {detalhes} D - {programa.likes} Like(s)')
