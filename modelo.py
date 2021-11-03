@@ -38,7 +38,6 @@ class Serie(Programa):
     def __str__(self):
         return f'{self._nome} - {self.ano} - {self.temporadas} Temporadas - {self._likes} Like(s)'
 
-
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
 vingadores.dar_likes()
 
@@ -46,11 +45,10 @@ atlanta = Serie('Atlanta', 2018, 2)
 atlanta.dar_likes()
 atlanta.dar_likes()
 
-# filmes_e_series = []  -->Criando uma lista.
-
 filmes_e_series = [vingadores, atlanta]
 
 for programa in filmes_e_series:
     print(programa)
+    print(repr(programa))
 
 
