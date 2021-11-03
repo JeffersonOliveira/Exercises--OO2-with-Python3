@@ -29,17 +29,6 @@ class Serie(Programa):
         super().__init__(nome, ano)
         self.temporadas = temporadas
 
-
-vingadores = Filme('vingadores - guerra infinita', 2018, 160)
-vingadores.dar_likes()
-print(f'Nome:{vingadores.nome} - Ano: {vingadores.ano} - Duracao:{vingadores.duracao} - Likes: {vingadores.likes}')
-
-atlanta = Serie('atlanta', 2018, 2)
-atlanta.dar_likes()
-atlanta.dar_likes()
-print(f'Nome:{atlanta.nome} - Ano: {atlanta.ano} - Temporadas:{atlanta.temporadas} - Likes: {atlanta.likes}')
-
-
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
 atlanta = Serie('atlanta', 2018, 2)
 vingadores.dar_likes()
@@ -49,5 +38,10 @@ vingadores.dar_likes()
 atlanta.dar_likes()
 atlanta.dar_likes()
 
-print(f'Nome: {vingadores.nome} - Likes: {vingadores.likes}')
-print(f'Nome: {atlanta.nome} - Likes: {atlanta.likes}')
+# print(f'Nome: {vingadores.nome} - Likes: {vingadores.likes}')
+# print(f'Nome: {atlanta.nome} - Likes: {atlanta.likes}')
+
+lista_programas = [vingadores, atlanta]
+for programa in lista_programas:
+    detalhes = f'{programa.duracao} min' if hasattr(programa, 'duracao') else f'{programa.temporadas} Temporadas'
+    print(f'{programa.nome} - {programa.ano} - {detalhes} - {programa.likes} Like(s)')
